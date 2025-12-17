@@ -17,23 +17,23 @@ Tech Stack
 
 1. Clone the repository
 
-git clone https://github.com/waheedimtiaz7/mini-exchange.git
+`git clone https://github.com/waheedimtiaz7/mini-exchange.git`
 cd mini-exchange
 
 
 2. Install backend dependencies
-composer install
+`composer install`
 
 
 3. Environment configuration
 cp .env.example .env
-php artisan key:generate
+`php artisan key:generate`
 
 
 4. Configure database:
-DB_DATABASE=mini_exchange
+`DB_DATABASE=mini_exchange
 DB_USERNAME=root
-DB_PASSWORD=
+DB_PASSWORD=`
 
 
 5. Configure Pusher (required for real-time)
@@ -51,8 +51,8 @@ VITE_PUSHER_CLUSTER=mt1
 
 
 6. Run migrations & seeders
-php artisan migrate
-php artisan db:seed
+`php artisan migrate`
+`php artisan db:seed`
 
 Seeders create:
 - Sample users (buyer & seller)
@@ -61,20 +61,20 @@ Seeders create:
 
 
 7. Install frontend dependencies
-npm install
-npm run dev
+`npm install`
+`npm run dev`
 
 
 8. Start services
-php artisan serve
+`php artisan serve`
 
 
 9. Run queue worker (required for matching):
-php artisan queue:work
+`php artisan queue:work`
 
 
 10. Access application
-http://127.0.0.1:8000
+`http://127.0.0.1:8000`
 
 
 Login using seeded credentials (see `UserSeeder`).
