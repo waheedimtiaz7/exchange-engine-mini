@@ -530,7 +530,7 @@ onMounted(async () => {
       </div>
 
       <div class="text-center text-xs text-white/40 pt-2">
-        © {{ new Date().getFullYear() }} Mini Exchange Engine
+        © {{ new Date().getFullYear() }} Mini Exchange
       </div>
     </div>
   </div>

@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <title>Mini Exchange</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
     @vite(['resources/js/app.js'])
 

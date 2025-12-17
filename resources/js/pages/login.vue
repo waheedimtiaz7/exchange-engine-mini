@@ -56,21 +56,22 @@ async function login() {
 
 <template>
   <div class="min-h-screen relative overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-600"></div>
-    <div class="absolute -top-24 -left-24 w-96 h-96 bg-white/15 blur-3xl rounded-full"></div>
-    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-white/10 blur-3xl rounded-full"></div>
+    <!-- Background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950"></div>
+    <div class="absolute -top-24 -left-24 w-96 h-96 bg-indigo-500/20 blur-3xl rounded-full"></div>
+    <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-fuchsia-500/15 blur-3xl rounded-full"></div>
 
     <div class="relative min-h-screen flex items-center justify-center p-6">
       <div class="w-full max-w-md">
         <div class="text-center mb-6">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 text-white text-sm">
             <span class="w-2 h-2 rounded-full bg-emerald-300"></span>
-            Mini Exchange Engine
+            Mini Exchange
           </div>
           <h1 class="mt-3 text-3xl font-bold text-white">Welcome back</h1>
           <p class="mt-1 text-white/80 text-sm">Sign in to continue</p>
         </div>
-        <div class="bg-white/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-white/40 p-6 sm:p-8">
+        <div class="lg:col-span-2 rounded-3xl border border-white/15 bg-white/10 backdrop-blur shadow-2xl p-5">
           <div v-if="toast.show" class="mb-4 rounded-2xl px-4 py-3 text-sm"
                :class="toast.type === 'error' ? 'bg-red-50 text-red-700 border border-red-100' : 'bg-slate-50 text-slate-700 border border-slate-100'">
             {{ toast.message }}
@@ -78,7 +79,7 @@ async function login() {
 
           <form class="space-y-4" @submit.prevent="login" novalidate>
             <div>
-              <label class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+              <label class="block text-sm font-medium text-white mb-1">Email</label>
               <div
                 class="flex items-center gap-2 rounded-2xl border bg-white px-3 py-2 shadow-sm focus-within:ring-4"
                 :class="emailError
@@ -100,7 +101,7 @@ async function login() {
             </div>
 
             <div>
-              <label class="block text-sm font-medium text-slate-700 mb-1">Password</label>
+              <label class="block text-sm font-medium text-white mb-1">Password</label>
 
               <div
                 class="flex items-center gap-2 rounded-2xl border bg-white px-3 py-2 shadow-sm focus-within:ring-4"
@@ -137,7 +138,7 @@ async function login() {
               type="submit"
               :disabled="loading"
               class="w-full rounded-2xl px-4 py-2.5 font-semibold text-white shadow-lg transition active:scale-[0.99]
-                     bg-gradient-to-r from-indigo-600 to-fuchsia-600 hover:from-indigo-700 hover:to-fuchsia-700
+                     bg-gradient-to-r from-indigo-500 to-fuchsia-500 hover:from-indigo-600 hover:to-fuchsia-600
                      disabled:opacity-60 disabled:cursor-not-allowed"
             >
               <span v-if="!loading">Login</span>
@@ -148,15 +149,15 @@ async function login() {
             </button>
 
             <div class="text-center text-xs text-slate-500">
-              Use: <span class="font-mono bg-slate-100 px-2 py-0.5 rounded-lg">testuser1@test.com</span>
+              Use: <span class="font-mono px-2 py-0.5 rounded-lg">testuser1@test.com</span>
               &nbsp; / &nbsp;
-              <span class="font-mono bg-slate-100 px-2 py-0.5 rounded-lg">123456</span>
+              <span class="font-mono px-2 py-0.5 rounded-lg">123456</span>
             </div>
           </form>
         </div>
 
         <p class="text-center mt-5 text-xs text-white/70">
-          © {{ new Date().getFullYear() }} Mini Exchange Engine
+          © {{ new Date().getFullYear() }} Mini Exchange
         </p>
       </div>
     </div>
